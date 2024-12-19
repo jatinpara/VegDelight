@@ -1,0 +1,84 @@
+/* Style for the dimmed background */
+.login-popup {
+    position: fixed; /* Change to fixed to cover the whole viewport */
+    top: 0;          /* Align to the top of the viewport */
+    left: 0;         /* Align to the left of the viewport */
+    z-index: 1;      /* Ensure it stays above other content */
+    width: 100vw;    /* Full width of the viewport */
+    height: 100vh;   /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background with opacity */
+    display: grid;
+    place-items: center; /* Center items vertically and horizontally */
+}
+
+/* Style for the popup container */
+.login-popup-container {
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 2rem;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s; /* Ensure fadeIn animation is still applied */
+}
+
+/* Title styles */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+/* Close icon */
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;  
+}
+
+/* Input fields */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Button styles */
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: red;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Checkbox and condition text styles */
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+/* Span styles */
+.login-popup p span {
+    color: red;
+    font-weight: 500;
+    cursor: pointer;
+}

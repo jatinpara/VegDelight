@@ -1,0 +1,477 @@
+/* Main Navbar Styling */
+.navbar {
+    padding: 15px 15px; /* Added padding for space at the edges */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.navbar .logo {
+    width: 150px;
+    margin-left: 20px; /* Ensures logo has space from the left edge */
+    color: red;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color:#49557e;
+    font-size: 18px;
+}
+
+/* Profile and Cart Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Spacing between profile and cart icon */
+    margin-right: 20px; /* Ensures profile icon has space from the right edge */
+}
+
+/* Button Styling */
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid red;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+
+/* Cursor for List Items */
+.navbar li {
+    cursor: pointer;
+}
+
+/* Search Icon Notification Dot */
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+/* Dropdown for Profile */
+.navbar-profile {
+    position: relative;
+  
+   
+    
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+
+/* Dropdown Display on Hover (Replaced with Click in JS) */
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid red;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: red;
+}
+
+/* Navbar Icons and Spacing */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Spacing between icons */
+}
+
+.navbar-search-container {
+    position: relative;
+}
+
+.navbar-search-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Basket Dot for Cart */
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+/* Search Results */
+.search-results-box {
+    position: absolute;
+    top: 50px; /* Start just below the navbar */
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}.search-results {
+    background-color: white;
+    width: 70%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 400px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Customizing the scrollbar */
+.search-results::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: grey; /* Set the color of the thumb (the draggable part) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+     /* Adds a transparent border to give the thumb more space */
+    background-clip: padding-box; /* Ensures the background color doesn't bleed into the border */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-results::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Set the track color (the area the thumb slides within) */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.search-results::-webkit-scrollbar-track:hover {
+    background-color: #e0e0e0; /* Darker track color on hover */
+}
+
+
+.food-item-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.food-item-card:hover {
+    background-color: #f1f1f1;
+}
+
+.food-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.food-details {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.food-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.food-add-remove {
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img {
+        width: 22px;
+    }
+    .navbar button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+    .navbar-right {
+        margin-right: 10px; /* Further adjustment for smaller screens */
+    }
+    .navbar .logo {
+        margin-left: 10px; /* Ensure logo has space on smaller screens */
+    }
+}
+
+/* Search Dropdown */
+.search-dropdown {
+    position: absolute;
+    top: 40px; /* Adjust based on the input height */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navbar Search Container */
+.navbar-search-container {
+    display: flex;
+    align-items: center; /* Ensures the search bar and icon are aligned */
+    position: relative;
+}
+
+.navbar-search-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    height: 36px; /* Ensures consistent height with the search icon */
+}
+
+.navbar-search-icon {/* Centers the icon vertically */
+    cursor: pointer; /* Makes the search icon clickable */
+}
+
+/* Cart Icon Container */
+.cart-icon-container {
+    position: relative; /* Required to position the notification dot */
+    display: flex;
+    align-items: center; /* Ensures cart icon stays aligned */
+}
+
+.cart-icon {
+    width: 24px; /* Adjust size of the cart icon */
+    height: 24px;
+    position: relative;
+}
+
+/* Cart Notification Dot */
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px; /* Position dot at the top-right corner */
+    left:20px;
+}
+
+.profile-icon{
+    width: 24px;
+}
+
+.search-results{
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    /* Adjust logo size for smaller screens */
+    .navbar .logo {
+        width: 100px;
+    }
+
+    /* Initially hide the search input and only show the icon */
+    .navbar-search-input {
+        display: none; /* Hide search bar input initially */
+    }
+
+    /* Make the search icon always visible */
+    .navbar-search-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Align the right-side icons */
+    .navbar-right {
+        gap: 10px; /* Further reduction in space between icons */
+    }
+
+    /* Remove unnecessary padding */
+    .navbar button {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .navbar-search-input {
+        margin: 0;
+    }
+
+    /* When active (after clicking search icon), show search bar */
+    .navbar-search-container.active .navbar-search-input {
+        display: block; /* Show search input when the icon is clicked */
+        position: fixed; /* Position relative to the viewport */
+        top: 60px; /* Position below the navbar */
+        left: 50%; /* Start at the horizontal center of the screen */
+        transform: translateX(-50%); /* Center by offsetting half the width */
+        width: min(90%, 400px); /* Responsive width: 90% of the screen or max 400px */
+        border-radius: 5px;
+        background-color: white;
+        padding: 10px;
+        z-index: 1001; /* Ensure it appears on top */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .search-results{
+        margin-top: 45px;
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+
+/* Dropdown for Profile */
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    display: none; /* Default is hidden */
+}
+
+/* Remove hover style, instead use JS to toggle display */
+.nav-profile-dropdown.show {
+    display: flex; /* Show dropdown when the class 'show' is added */
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid red;
+    outline: 2px solid white;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: red;
+}

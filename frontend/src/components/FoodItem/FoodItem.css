@@ -1,0 +1,102 @@
+
+.food-item-image {
+    width: 100%;
+    height: 200px;  /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image is properly scaled */
+    border-radius: 15px 15px 0px 0px;
+}
+
+.food-item {
+    width: 100%;
+    max-width: 300px;  /* Fixed width */
+    height: 400px;     /* Fixed height */
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.food-item-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.food-item-name-rating img {
+    width: 70px;
+}
+
+/* Ensuring the description is clamped correctly */
+.food-item-desc {
+    color: #676767;
+    font-size: 12px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;  /* Clamp the description to 3 lines */
+    line-height: 1.5;  /* Adjust line height for readability */
+    max-height: 4.5em;  /* Limit the height of the description box */
+}
+
+/* Ensure price stays in a fixed position */
+.food-item-price {
+    color: red;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;  /* Keeps the price consistently spaced */
+    align-self: flex-start;  /* Aligns the price at the bottom of the card */
+}
+
+.food-item-img-container {
+    position: relative;
+}
+
+.food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.food-item-counter img {
+    width: 30px;
+}
